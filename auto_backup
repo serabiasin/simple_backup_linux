@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+from=("/home/username/directory" "/home/username/directory" "/home/username/directory" "/home/username/directory")
+shopt -s nullglob dotglob
+target=(/target_dir/directory)
+
+flag=0
+
+if [[ ${#target[@]} -gt 0  ]]; then
+  echo "Mounted"
+  flag=1
+else
+  echo "Not mounted please mount first!"
+fi
+
+
+if [[ $flag -eq 1 ]]; then
+  echo "Get ready..."
+  echo "Copying to $target ...."
+
+for temp in ${from[@]}; do
+    cp -r "$temp" "$target"
+    echo "folder : $temp copied to $target"
+    done
+
+else
+  echo "fail.."
+fi
