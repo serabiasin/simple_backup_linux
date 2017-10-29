@@ -9,7 +9,7 @@ sangat cocok untuk orang yang malas melakukan copy-paster dari satu folder ke fo
    1. pada terminal, `sudo fdisk -l`
    1. setelah itu akan muncul list penamaan partisi versi linux
    1. Biasanya untuk media eksternal, namanya adalah sdbX, X adalah nomor partisi
-   1. Setelah mengetahui nomor partisi, membuat direktori sementara di /mnt/nama, "nama" bisa diganti sesuka anda
+   1. Setelah mengetahui nomor partisi, membuat direktori sementara di /mnt/nama, "nama" bisa diganti sesuka anda perlu di ingat, folder ini yang akan di jadikan acuan variable `target`
    1. `sudo mkdir /mnt/nama`
    1. setelah itu ganti permissin dengan `sudo chmod -R -v 777 /mnt/nama/*`
    1. mount external drive dengan cara `sudo mount /dev/sdbX /mnt/nama`
